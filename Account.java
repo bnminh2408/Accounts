@@ -3,7 +3,7 @@ package accounts;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Account {
+abstract class Account {
 	
 	public static int counter = 0;
 	private String number;
@@ -13,17 +13,25 @@ public abstract class Account {
 	
 	public Account() {
 		counter++;
-		int number = counter;
+		this.number = toString(counter);
 		//andere Anweisungen wird später implementiert
 	}
 	
-//	public Account(Customer customer) {
-//		
-//		customer.addAccount
-//	}
+	public Account(Customer customer) {
+		
+		customer.
+		customer.addAccount(this);
+	}
 
 	public float getBalance() {
-		float balance;
-		balance = balance + transaction.
+		float balance = 0.0f;
+
+		for (Transaction transaction : negativeTransactions) {
+			balance += transaction;
+		}
+		for (Transaction transaction : positiveTransactions) {
+			balance += transaction;
+		}
+		return balance;
 	}
 }
